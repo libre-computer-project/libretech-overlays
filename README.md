@@ -80,6 +80,11 @@ To add a simple device, here a DS3231 RTC module :
 # echo "ds3231 0x68" > /sys/class/i2c-adapter/i2c-1/new_device
 ```
 
+You can also use the device specific overlay, before or after the bus overlay :
+```
+# overlay.sh add libretech-cc-ds3231-i2c-ao
+```
+
 I2C B
 -----
 
@@ -102,6 +107,11 @@ To add a simple device, here a DS3231 RTC module :
 # echo "ds3231 0x68" > /sys/class/i2c-adapter/i2c-2/new_device
 ```
 
+You can also use the device specific overlay, before or after the bus overlay :
+```
+# overlay.sh add libretech-cc-ds3231-i2c-b
+```
+
 SPICC
 -----
 
@@ -113,4 +123,17 @@ Pinout :
 
 ```
 # overlay.sh add libretech-cc-spicc
+```
+
+The spidev interface can be activated by loading the spidev overlay :
+```
+# overlay.sh add libretech-cc-spidev-spicc
+```
+
+Unloading
+=========
+
+Any overlay loading can be reverted by using the `rm` command instead of `add` like :
+```
+# overlay.sh rm libretech-cc-spicc
 ```
