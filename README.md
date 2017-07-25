@@ -39,6 +39,58 @@ Load
 
 Then load the overlay (we can only specify part of the filename) :
 
+UART A
+------
+
 ```
 # overlay.sh add libretech-cc-uarta
+```
+
+To enable a serial console on it :
+```
+# systemctl enable serial-getty@ttyAML1.service
+# systemctl start serial-getty@ttyAML1.service
+```
+
+I2C AO
+------
+
+```
+# overlay.sh add libretech-cc-i2c-ao
+```
+
+To scan available I2C devices :
+```
+# i2cdetect -y 1
+```
+
+To add a simple device, here a DS3231 RTC module :
+
+```
+# echo "ds3231 0x68" > /sys/class/i2c-adapter/i2c-1/new_device
+```
+
+I2C B
+-----
+
+```
+# overlay.sh add libretech-cc-i2c-b
+```
+
+To scan available I2C devices :
+```
+# i2cdetect -y 2
+```
+
+To add a simple device, here a DS3231 RTC module :
+
+```
+# echo "ds3231 0x68" > /sys/class/i2c-adapter/i2c-2/new_device
+```
+
+SPICC
+-----
+
+```
+# overlay.sh add libretech-cc-spicc
 ```
