@@ -23,13 +23,22 @@ make
 Install
 =======
 
-Copy the `overlay/*.dtbo` in the /lib/firmware directory of your rootfs.
+Copy the `overlay/*.dtbo` files in the `/lib/firmware` directory of your rootfs.
+
+Copy the `overlay.sh` tool into the `/usr/sbin` directory of your rootfs.
 
 Load
 ====
 
 ```
 # mount x /sys/kernel/config -t configfs
-# mkdir /sys/kernel/config/device-tree/overlays/uarta
-# echo "/lib/firmware/meson-gxl-s905x-libretech-cc-uarta.dtbo" > /sys/kernel/config/device-tree/overlays/uarta/path
+```
+
+(if not already mounted)
+
+
+Then load the overlay (we can only specify part of the filename) :
+
+```
+# overlay.sh add libretech-cc-uarta
 ```
