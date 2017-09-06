@@ -1,7 +1,7 @@
 Libre Computer Linux Overlays
 =============================
 
-These overlays are designed to work with the 4.12 Linux fork from https://github.com/BayLibre/libretech-linux
+These overlays are designed to work with the 4.13 Linux fork from https://github.com/BayLibre/libretech-linux
 
 Build
 =====
