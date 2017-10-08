@@ -1,12 +1,13 @@
 /*
  * Copyright (c) 2017 BayLibre, SAS.
  * Author: Neil Armstrong <narmstrong@baylibre.com>
+ * Author: Thomas Rohloff <v10lator@myway.de>
  *
  * SPDX-License-Identifier: (GPL-2.0+ OR MIT)
  */
 
 /*
- * Overlay aimed to add an DS3231 RTC module on I2C_AO bus, address 0x68.
+ * Overlay aimed to add an DS3231 RTC module on I2C_AO bus, address 0x57 and 0x68.
  */
 
 /dts-v1/;
@@ -22,6 +23,10 @@
 			rtc@68 {
 				compatible = "maxim,ds3231";
 				reg = <0x68>;
+			};
+			at24@57 {
+				compatible = "at,24c32";
+				reg = <0x57>;
 			};
 		};
 	};
