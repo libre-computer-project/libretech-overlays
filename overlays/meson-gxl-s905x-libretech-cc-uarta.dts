@@ -17,6 +17,14 @@
 	compatible = "libretech,cc", "amlogic,s905x", "amlogic,meson-gxl";
 
 	fragment@0 {
+		target-path = "/aliases";
+
+		__overlay__ {
+			serial1 = "/soc/cbus@c1100000/serial@84c0";
+		};
+	};
+
+	fragment@1 {
 		target = <&uart_A>;
 
 		__overlay__ {
