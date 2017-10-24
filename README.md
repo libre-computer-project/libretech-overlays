@@ -81,8 +81,17 @@ To add a simple device, here a DS3231 RTC module :
 ```
 
 You can also use the device specific overlay, before or after the bus overlay :
+
+- DS3231 on I2C AO
+
 ```
 # overlay.sh add libretech-cc-ds3231-i2c-ao
+```
+
+- AT24C32 on I2C AO
+
+```
+# overlay.sh add libretech-cc-at24c32-i2c-ao
 ```
 
 I2C B
@@ -108,9 +117,17 @@ To add a simple device, here a DS3231 RTC module :
 ```
 
 You can also use the device specific overlay, before or after the bus overlay :
+
+- DS3231 on I2C B
+
 ```
 # overlay.sh add libretech-cc-ds3231-i2c-b
 ```
+
+- AT24C32 on I2C B
+
+```
+# overlay.sh add libretech-cc-at24c32-i2c-b
 
 SPICC
 -----
