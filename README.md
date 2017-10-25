@@ -128,6 +128,7 @@ You can also use the device specific overlay, before or after the bus overlay :
 
 ```
 # overlay.sh add libretech-cc-at24c32-i2c-b
+```
 
 SPICC
 -----
