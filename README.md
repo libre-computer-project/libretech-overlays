@@ -23,7 +23,7 @@ make
 Install
 =======
 
-Copy the `overlay/*.dtbo` files in the `/lib/firmware` directory of your rootfs.
+Copy the `overlays/*.dtbo` files in the `/lib/firmware` directory of your rootfs.
 
 Copy the `overlay.sh` tool into the `/usr/sbin` directory of your rootfs.
 
